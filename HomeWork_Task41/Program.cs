@@ -5,4 +5,41 @@
 
 Console.Clear();
 
-Console.WriteLine("Pls enter any ammount of any numbers through , : ");
+Console.Write($"Pls enter intended ammount of numbers: ");
+int count = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[count];
+
+void InputNumbers(int count)
+{
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"Pls enter {i + 1} number: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+}
+
+
+int FindHowManyPositive(int[] resFHMP)
+{
+    int count = 0;
+    for (int i = 0; i < resFHMP.Length; i++)
+    {
+        if (resFHMP[i] > 0) count += 1;
+    }
+    return count;
+}
+
+void PrintArray(int[] resPA)
+{
+    for (int i = 0; i < resPA.Length; i++)
+    {
+        Console.Write((i == resPA.Length - 1 ? $"{resPA[i]} " : $"{resPA[i]}, "));
+    }
+}
+
+InputNumbers(count);
+Console.WriteLine();
+PrintArray(array);
+Console.WriteLine($"-> {FindHowManyPositive(array)}\n");
+
+
