@@ -6,13 +6,13 @@
 Console.Clear();
 
 Console.Write("Pls enter coefficient k1: ");
-double a = Convert.ToInt32(Console.ReadLine());
+double a = double.Parse(Console.ReadLine());
 Console.Write("Pls enter coefficient b1: ");
-double b = Convert.ToInt32(Console.ReadLine());
+double b = double.Parse(Console.ReadLine());
 Console.Write("Pls enter coefficient k2: ");
-double c = Convert.ToInt32(Console.ReadLine());
+double c = double.Parse(Console.ReadLine());
 Console.Write("Pls enter coefficient b2: ");
-double d = Convert.ToInt32(Console.ReadLine());
+double d = double.Parse(Console.ReadLine());
 
 void PrintResults()
 {
