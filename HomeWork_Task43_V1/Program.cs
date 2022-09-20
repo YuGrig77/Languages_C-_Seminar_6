@@ -26,8 +26,8 @@ void PrintResults()
     }
     else
     {
-        double x = (d - b) / (a - c);
-        double y = x * c + d;
+        double x = Math.Round((d - b) / (a - c), 2);
+        double y = Math.Round((x * c + d), 2);
         Console.Write($"\nk1 = {a}, b1 = {b}, " +
          $"k2 = {c}, b2 = {d} -> " +
          $" cross point coordinates ({x}; {y})");
